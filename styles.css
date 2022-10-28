@@ -7,8 +7,8 @@ body
 {
     background-color: aliceblue;
     font-size: 2rem;
-    width: 100%;
 }
+/* Make navbar as a column */
 nav
 {
     display: flex;
@@ -21,9 +21,15 @@ a
 {
     text-decoration: none;
 }
+/* Link when hovered over */
 a:hover 
 {
     color: hotpink;
+}
+/* Disable color change when link is visited */
+a:visited
+{
+   color: inherit;
 }
 table, th, td
 {
@@ -37,6 +43,7 @@ img
     height: 100%;
     object-fit: cover;
 }
+/* Gallery */
 .wrapper
 {
     display: grid;
@@ -46,6 +53,7 @@ img
 /* wider screens */
 @media  screen and (min-width: 768px)
 {
+    /* row for wider screen */
     nav
     {
         flex-direction: row;
