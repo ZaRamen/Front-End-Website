@@ -1,40 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="normalize.css">
-    <title>Form</title>
-</head>
-<body>
-    <nav>
-        <div><a href="index.html">Home</a></div>
-        <div><a href="sleep.html">Sleep</a></div>
-        <div><a href="gaming.html">Gaming</a></div>
-        <div><a href="food.html">Food</a></div>
-        <div><a href="exercise.html">Exercise</a></div>
-        <div><a href="form.html">Form</a></div>
-    </nav>
-    <div>
-        <!-- modify this form HTML and place wherever you want your form -->
-<form
-action="https://formspree.io/f/mgeqnrpo"
-method="POST"
->
-<label>
-  Your email:
-  <input type="email" name="email">
-</label>
 
-<label>
-  Your message:
-  <textarea name="message"></textarea>
-</label>
-<!-- your other form fields go here -->
-<button type="submit">Send</button>
-</form>
-    </div>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
+  <title>Form</title>
+</head>
+
+<body>
+  <nav> 
+    <div><a href="index.html">Home</a></div>
+    <div><a href="sleep.html">Sleep</a></div>
+    <div><a href="gaming.html">Gaming</a></div>
+    <div><a href="food.html">Food</a></div>
+    <div><a href="exercise.html">Exercise</a></div>
+    <div><a href="form.html">Form</a></div>
+  </nav>
+  <div>
+    <!-- modify this form HTML and place wherever you want your form -->
+    <form action="https://formspree.io/f/mgeqnrpo" method="POST">
+      <label>Your email:</label>
+      <input type="email" name="email">
+      <label>
+        Your message:
+        <textarea name="message"></textarea>
+      </label>
+      <!-- your other form fields go here -->
+      <button type="submit">Send</button>
+    </form>
+  </div>
 </body>
+
 </html>
