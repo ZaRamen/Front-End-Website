@@ -27,6 +27,7 @@ body
 }
 
 /* Make navbar as a column */
+/* COlor is just a test not the actual color */
 nav
 {
     display: flex;
@@ -43,12 +44,12 @@ a
 }
 
 /* Disable color change when link is visited */
-a:visited
+a:visited, .dropdown-btn
 {
    color: blue;
 }
 /* Link when hovered over */
-a:hover 
+a:hover, .dropdown-btn:hover
 {
     color: hotpink;
 }
@@ -74,7 +75,31 @@ img
     object-fit: cover;
     border-radius: 5%;
 }
-
+.dropdown
+{
+    overflow: hidden;
+    text-align: center;
+}
+.dropdown-content
+{
+    display: none;
+    position: relative;
+    background-color: inherit;
+    
+}
+.dropdown:hover .dropdown-content
+{
+    display: block;
+}
+.dropdown-content div
+{
+    padding: .75rem;
+    padding-right: 1rem;
+}
+.dropdown-content div:hover 
+{
+    background-color: rgb(190, 156, 111);
+}
 
 
 /* wider screens */
@@ -85,8 +110,34 @@ img
     {
         flex-direction: row;
         justify-content: space-around;
+        overflow: hidden;
+        height: fit-content
+    }   
+    .dropdown
+    {
+        overflow: hidden;
+        text-align: left;
     }
-
+    .dropdown-content
+    {
+        display: none;
+        position: absolute;
+        background-color: white;
+        
+    }
+    .dropdown:hover .dropdown-content
+    {
+        display: block;
+    }
+    .dropdown-content div
+    {
+        padding: .75rem;
+        padding-right: 2rem;
+    }
+    .dropdown-content div:hover 
+    {
+        background-color: #ddd;
+    }
     .wrapper
     {
         grid-template-columns: repeat(2, minmax(100px, 1fr));
