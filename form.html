@@ -31,14 +31,31 @@
     <!-- modify this form HTML and place wherever you want your form -->
     <form action="https://formspree.io/f/mdojwvej" method="POST">
       <label>
-        Your Name:
+        Name:
         <input type="text" name="Name"  required>
       </label>
       <label>
-        Your message:
+        How many hours do you sleep in a day?
+        <input type="number" name="sleep hours" min="0" max="24">
+      </label>
+      <label>
+        Favorite Game:
+        <input type="text" name="Favorite Game" required>
+      </label>
+      <label>
+        Favorite Food:
+        <input type="text" name="Favorite Food" required>
+      </label>
+      <label>
+        Favorite Exercise:
+        <input type="text" name="Favorite Exercise" required>
+      </label>
+      <label>
+        What do you do when you're bored?
         <textarea name="message" required></textarea>
       </label>
       <!-- your other form fields go here -->
+      <input type="reset" value="Clear Answers">
       <input type="submit" value="Submit"></input>
     </form>
   </div>
