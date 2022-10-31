@@ -3,7 +3,10 @@ html, body
 {
     height: 100%;
 }
-
+#mode
+{
+    cursor: pointer;
+}
 body
 {
     background-color: aliceblue;
@@ -39,6 +42,7 @@ input, textarea
 {
     width: 100%;
 }
+
 input[type]:not([type=reset]):not([type=submit]):focus,textarea:focus
 {
     border: 3px solid #555;
@@ -80,7 +84,7 @@ a
 }
 
 /* Disable color change when link is visited */
-a:visited, .dropdown-btn
+a:visited, .dropdown-btn, #mode
 {
    color: blue;
 }
