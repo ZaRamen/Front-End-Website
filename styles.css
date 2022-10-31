@@ -31,6 +31,33 @@ body
     width: 80%;
     margin: auto;
 }
+input, textarea
+{
+    width: 100%;
+}
+input[type=text]:focus, textarea:focus
+{
+    border: 3px solid #555;
+    background-color: #f8f8f8;
+}
+textarea
+{
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    resize: none;
+}
+input[type=submit]
+{
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color:bisque;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+}
 /* Make navbar as a column */
 /* COlor is just a test not the actual color */
 nav
