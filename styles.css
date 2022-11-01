@@ -82,6 +82,10 @@ input[type="checkbox"]{
     border-radius: 50%;
     transition: .4s;
 }
+#circle
+{
+    transition: .4s;
+}
 input[type="checkbox"]:checked > #circle{
     transform: translateX(26px);
 }
@@ -90,6 +94,7 @@ input[type="checkbox"]:checked > #circle{
 {
     width: 80%;
     margin: auto;
+    margin-top: 2rem;
     text-align: center;
     margin-bottom: 10px;
 }
@@ -97,6 +102,7 @@ input[type="checkbox"]:checked > #circle{
 {
     text-indent: 30px;
     margin: auto;
+    text-align: center;
     width: 70%;
     font-size: 1.5rem;
 }
@@ -104,6 +110,7 @@ input[type="checkbox"]:checked > #circle{
 {
     width: 80%;
     margin: auto;
+    text-align: center;
 }
 
 /* Photo Gallery */
@@ -163,6 +170,13 @@ img
     border-radius: 5%;
 }
 
+.game-images
+{
+    width: 80%;
+    height: 80%;
+    margin: auto;
+    object-fit: cover;
+}
 
 
 /* wider screens */

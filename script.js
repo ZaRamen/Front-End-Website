@@ -13,7 +13,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
         }
         else
         {   
-            bodyStyle.backgroundColor = "white";
+            bodyStyle.backgroundColor = "aliceblue";
             bodyStyle.color = "black";
         }
         
