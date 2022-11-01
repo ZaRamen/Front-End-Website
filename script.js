@@ -2,18 +2,21 @@ window.addEventListener('DOMContentLoaded', (event) => {
     console.log('DOM fully loaded and parsed');
     document.getElementById('mode').addEventListener("click", (event) => 
     {
-
-        console.log(document.body.style.backgroundColor);
-        if (document.body.style.backgroundColor != "black")
+        
+        var bodyStyle = document.body.style;
+        // returns rgb instead of hex //also can't set var to document.body.style.backgroundColor
+        console.log(bodyStyle.backgroundColor)
+        if (bodyStyle.backgroundColor != "rgb(54, 57, 63)")
         {
-            document.body.style.backgroundColor = "black";
+            bodyStyle.backgroundColor = "#36393F";
+            bodyStyle.color = "#FFFFFF";
         }
         else
-        {
-            document.body.style.backgroundColor = "white";
+        {   
+            bodyStyle.backgroundColor = "white";
+            bodyStyle.color = "black";
         }
         
 
     });
-
 });
