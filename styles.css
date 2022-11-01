@@ -94,11 +94,6 @@ input[type="checkbox"]{
     transition: .4s;
 }
 
-#circle
-{
-    transition: .4s;
-}
-
 input[type="checkbox"]:checked > #circle
 {
     transform: translateX(26px);
