@@ -67,11 +67,22 @@ a:hover, .dropdown-btn:hover
     height: 34px;
     border-radius: 34px;
 }
-input[type="checkbox"]
+input[type="checkbox"]{
+    position: absolute;
+    opacity: 0;
+    width: fit-content;
+    height: fit-content;
+}
+#circle
 {
+    display: inline-block;
+    width: 30px;
+    height: 34px;
+    background-color: white;
+    border-radius: 50%;
     transition: .4s;
 }
-input:checked {
+input[type="checkbox"]:checked > #circle{
     transform: translateX(26px);
 }
 /* Headers */
