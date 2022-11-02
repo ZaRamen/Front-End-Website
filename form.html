@@ -2,63 +2,70 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"> -->
-  <title>Form</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"> -->
+    <title>Form</title>
 </head>
 
 <body>
-  <nav>
-    <div><a href="index.html">Home</a></div>
-    <div><a href="form.html">Form</a></div>
-    <div class="dropdown">
-        <div class="dropdown-btn">Activities 
-            &#9207;
+    <nav>
+        <div><a href="index.html">Home</a></div>
+        <div><a href="form.html">Form</a></div>
+        <div class="dropdown">
+            <div class="dropdown-btn">Activities
+                &#9207;
+            </div>
+            <div class="dropdown-content">
+                <div><a href="sleep.html">Sleep</a></div>
+                <div><a href="gaming.html">Gaming</a></div>
+                <div><a href="food.html">Food</a></div>
+                <div><a href="exercise.html">Exercise</a></div>
+            </div>
         </div>
-        <div class="dropdown-content">
-            <div><a href="sleep.html">Sleep</a></div>
-            <div><a href="gaming.html">Gaming</a></div>
-            <div><a href="food.html">Food</a></div>
-            <div><a href="exercise.html">Exercise</a></div>
+        <div id="mode">
+            <input type="checkbox"><span id="circle"></span>
         </div>
+    </nav>
+    <div>
+        <!-- modify this form HTML and place wherever you want your form -->
+        <form action="https://formspree.io/f/mdojwvej" method="POST">
+            <label>
+                Name:
+                <input type="text" name="Name" required>
+            </label>
+            <label>
+                How many hours do you sleep in a day?
+                <input type="number" name="sleep hours" min="0" max="24">
+            </label>
+            <label>
+                Favorite Game:
+                <input type="text" name="Favorite Game" required>
+            </label>
+            <label>
+                Favorite Food:
+                <input type="text" name="Favorite Food" required>
+            </label>
+            <label>
+                Favorite Exercise:
+                <input type="text" name="Favorite Exercise" required>
+            </label>
+            <label>
+                What do you do when you're bored?
+                <textarea name="message" required></textarea>
+            </label>
+            <!-- your other form fields go here -->
+            <input type="reset" value="Clear Answers">
+            <input type="submit" value="Submit">
+        </form>
     </div>
-  </nav>
-  <div>
-    <!-- modify this form HTML and place wherever you want your form -->
-    <form action="https://formspree.io/f/mdojwvej" method="POST">
-      <label>
-        Name:
-        <input type="text" name="Name"  required>
-      </label>
-      <label>
-        How many hours do you sleep in a day?
-        <input type="number" name="sleep hours" min="0" max="24">
-      </label>
-      <label>
-        Favorite Game:
-        <input type="text" name="Favorite Game" required>
-      </label>
-      <label>
-        Favorite Food:
-        <input type="text" name="Favorite Food" required>
-      </label>
-      <label>
-        Favorite Exercise:
-        <input type="text" name="Favorite Exercise" required>
-      </label>
-      <label>
-        What do you do when you're bored?
-        <textarea name="message" required></textarea>
-      </label>
-      <!-- your other form fields go here -->
-      <input type="reset" value="Clear Answers">
-      <input type="submit" value="Submit">
-    </form>
-  </div>
+    <footer>
+        <br>
+        <p>&copy Raymond Lin and Crystal Ling 2022</p>
+    </footer>
 </body>
 
 </html>
