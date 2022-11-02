@@ -203,7 +203,6 @@ img:not(.game-images)
 {
     display: block;
     width: 50%;
-    height: fit-content;
     margin: auto;
     object-fit: cover;
 
