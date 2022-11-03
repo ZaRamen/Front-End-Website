@@ -71,6 +71,7 @@ a:hover, .dropdown-btn:hover
 {
     cursor: pointer;
     display: inline-block;
+    margin:auto;
     background-color: #ccc;
     width: 120px;
     height: 34px;
@@ -263,5 +264,10 @@ footer
     {
         grid-template-columns: repeat(2, minmax(100px, 1fr));
         grid-template-rows: repeat(2, minmax(100px, 1fr));
+    }
+    
+    #mode
+    {
+        margin: 0px;
     }
 }
