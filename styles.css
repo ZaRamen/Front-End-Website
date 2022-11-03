@@ -6,7 +6,7 @@ html, body
 
 body
 {
-    background-color: aliceblue;
+    background-color: #F7F5E6;
     font-size: 32px;
 }
 
@@ -18,7 +18,7 @@ nav
     text-align: center;
     row-gap: 2rem;
     padding: 1rem;
-    background-color: burlywood;
+    background-color: #52658F;
 }
 
 a
@@ -29,13 +29,13 @@ a
 /* Disable color change when link is visited */
 a:visited, .dropdown-btn, #mode
 {
-   color: blue;
+   color: #F7F5E6;
 }
 
 /* Link when hovered over */
 a:hover, .dropdown-btn:hover
 {
-    color: hotpink;
+    color: #e0dec9;
 }
 
 .dropdown
@@ -64,7 +64,7 @@ a:hover, .dropdown-btn:hover
 
 .dropdown-content div:hover 
 {
-    background-color: rgb(190, 156, 111);
+    background-color: #4a5b82;
 }
 
 #mode
@@ -177,7 +177,8 @@ input[type=submit], input[type=reset]
 {
     margin-top: 1rem;
     padding: 1rem;
-    background-color:bisque;
+    background-color: #52658F;
+    color: #F7F5E6;
     border: none;
     text-decoration: none;
     cursor: pointer;
@@ -239,7 +240,7 @@ footer
     {
         display: none;
         position: absolute;
-        background-color: burlywood;
+        background-color: #52658F;
     }
     
     .dropdown:hover .dropdown-content
@@ -255,7 +256,7 @@ footer
     
     .dropdown-content div:hover 
     {
-        background-color: rgb(190, 156, 111);
+        background-color: #4a5b82;
     }
     
     .wrapper

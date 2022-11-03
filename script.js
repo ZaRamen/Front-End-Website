@@ -6,14 +6,14 @@ window.addEventListener('DOMContentLoaded', (event) => {
         var bodyStyle = document.body.style;
         // returns rgb instead of hex //also can't set var to document.body.style.backgroundColor
         console.log(bodyStyle.backgroundColor)
-        if (bodyStyle.backgroundColor != "rgb(54, 57, 63)")
+        if (bodyStyle.backgroundColor != "rgb(51, 58, 86)")
         {
-            bodyStyle.backgroundColor = "#36393F";
+            bodyStyle.backgroundColor = "#333A56";
             bodyStyle.color = "#FFFFFF";
         }
         else
         {   
-            bodyStyle.backgroundColor = "aliceblue";
+            bodyStyle.backgroundColor = "#F7F5E6";
             bodyStyle.color = "black";
         }
         
