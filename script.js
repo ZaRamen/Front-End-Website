@@ -4,7 +4,7 @@ let isDark = false;
 function initialize()
 {
     bodyStyle = document.body.style;
-    footer = document.getElementById("footer");
+    footer = document.getElementById("footer-content");
     if (isDark)
     {
         setMode();
