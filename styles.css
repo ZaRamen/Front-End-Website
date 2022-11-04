@@ -1,7 +1,9 @@
 /* Mobile and CSS selectors for any device size */
 html, body 
 {
+    position: relative;
     height: 100%;
+
 }
 
 body
@@ -214,11 +216,12 @@ img:not(.game-images)
 /* Footer */
 footer
 {
+  
     width: 100%;
-    margin: auto;
     background-color: #E8E8E8;
     text-align: center;
     font-size: 1rem;
+
 }
 
 /* wider screens */
@@ -272,4 +275,5 @@ footer
     {
         margin: 0px;
     }
+    
 }
