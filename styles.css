@@ -214,7 +214,11 @@ img:not(.game-images)
     object-fit: cover;
 
 }
-
+.ending
+{
+    font-size: 1rem;
+    text-align: center;
+}
 #footer
 {
     display: flex;

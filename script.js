@@ -1,12 +1,14 @@
 
+let isDark = false;
+
 function initialize()
 {
     bodyStyle = document.body.style;
     footer = document.getElementById("footer");
-    // if (isDark)
-    // {
-    //     setMode();
-    // }
+    if (isDark)
+    {
+        setMode();
+    }
 }
 function setMode()
 {
