@@ -24,6 +24,7 @@ nav
 a
 {
     text-decoration: none;
+    color: #F7F5E6;
 }
 
 /* Disable color change when link is visited */
@@ -212,8 +213,9 @@ img:not(.game-images)
 /* Footer */
 footer
 {
-    width: 80%;
+    width: 100%;
     margin: auto;
+    background-color: #E8E8E8;
     text-align: center;
     font-size: 1rem;
 }
