@@ -1,7 +1,9 @@
 /* Mobile and CSS selectors for any device size */
 html, body 
 {
-    position: relative;
+ 
+    display: flex;
+    flex-direction: column;
     min-height: 100vh;
 
 }
@@ -213,17 +215,26 @@ img:not(.game-images)
 
 }
 
+#footer
+{
+    display: flex;
+    align-items: flex-end;
+    flex: 1;
+    justify-content: center;
+}
 /* Footer */
 footer
 {
     width: 100%;
+    height: 50px;
     background-color: #E8E8E8;
     text-align: center;
     font-size: 1rem;
-
+    /* flex: 1; */
 }
 footer p
 {
+    
     padding: 10px;
     margin: 0px;
 }
