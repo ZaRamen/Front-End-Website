@@ -1,11 +1,9 @@
 /* Mobile and CSS selectors for any device size */
 html, body 
 {
- 
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-
 }
 
 body
@@ -131,7 +129,7 @@ input[type="checkbox"]:checked > #circle
 }
 
 /* Select all content children and set it to the center except p elements*/
-.content > *:not(p)
+.content > *:not(p):not(ol):not(ul)
 {
     text-align: center;
 }
@@ -142,6 +140,17 @@ input[type="checkbox"]:checked > #circle
     font-size: 1.5rem;
 }
 
+/* Centers lists */
+.lists
+{
+    display: inline-block;
+    text-align: center;
+}
+
+li
+{
+    font-size: 1.5rem;
+}
 
 /* Photo Gallery */
 .wrapper
@@ -151,6 +160,25 @@ input[type="checkbox"]:checked > #circle
     display: grid;
     grid-gap: 5px;
     grid-template-columns: repeat(1, minmax(100px, 1fr));
+}
+
+/* Ingredients */
+.ingredientsgrid
+{
+    display: grid;
+    grid-template-columns: repeat(1, minmax(100px, 1fr));
+}
+
+.left
+{
+    margin-bottom: 0;
+    margin-block-start: 0px;
+}
+
+.right
+{
+    margin-top: 0;
+    margin-block-end: 0px;
 }
 
 /* Form */
@@ -219,6 +247,7 @@ img:not(.game-images)
     font-size: 1rem;
     text-align: center;
 }
+
 #footer
 {
     display: flex;
@@ -226,6 +255,7 @@ img:not(.game-images)
     flex: 1;
     justify-content: center;
 }
+
 /* Footer */
 footer
 {
@@ -236,6 +266,7 @@ footer
     font-size: 1rem;
     /* flex: 1; */
 }
+
 footer p
 {
     margin: 0px;
@@ -291,6 +322,24 @@ footer p
     #mode
     {
         margin: 0px;
+    }
+ 
+    .ingredientsgrid
+    {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(100px, 1fr));
+    }
+
+    .left
+    {
+        grid-column-start: 1;
+        text-align: left;
+    }
+
+    .right
+    {
+        grid-column-start: 2;
+        text-align: left;
     }
     
 }
