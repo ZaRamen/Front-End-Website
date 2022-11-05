@@ -226,7 +226,7 @@ table, th, td
     text-align: center;
 }
 
-img:not(.game-images)
+img:not(.shrinked-images)
 {
     width: 100%;
     height: 100%;
@@ -234,7 +234,7 @@ img:not(.game-images)
     border-radius: 5%;
 }
 
-.game-images
+.shrinked-images
 {
     display: block;
     width: 50%;
