@@ -9,7 +9,7 @@ html, body
 body
 {
     background-color: #F7F5E6;
-    font-size: 32px;
+    font-size: 2rem;
 }
 
 /* Make navbar as a column */
@@ -163,7 +163,7 @@ li
 }
 
 /* Ingredients */
-.ingredientsgrid
+.ingredients-grid
 {
     display: grid;
     grid-template-columns: repeat(1, minmax(100px, 1fr));
@@ -237,7 +237,7 @@ img:not(.shrinked-images)
 .shrinked-images
 {
     display: block;
-    width: 50%;
+    width: 90%;
     margin: auto;
     object-fit: cover;
     border-radius: 5%;
@@ -283,7 +283,10 @@ footer p
         overflow: hidden;
         height: fit-content
     }   
-    
+    .shrinked-images
+    {
+        width: 60%;
+    }
     .dropdown
     {
         overflow: hidden;
@@ -324,7 +327,7 @@ footer p
         margin: 0px;
     }
  
-    .ingredientsgrid
+    .ingredients-grid
     {
         display: grid;
         grid-template-columns: repeat(2, minmax(100px, 1fr));
