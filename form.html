@@ -27,35 +27,42 @@
                 <div><a href="exercise.html">Exercise</a></div>
             </div>
         </div>
-        <div id="mode">
-            <input type="checkbox"><span id="circle"></span>
+        <div>
+            <label id="toggle">
+                <input id="check-btn" type="checkbox">
+                <span id="slider"></span>
+            </label>
         </div>
     </nav>
         <!-- modify this form HTML and place wherever you want your form -->
         <form action="https://formspree.io/f/mdojwvej" method="POST">
             <label>
-                Name:
+                Name*
                 <input type="text" name="Name" required>
             </label>
             <label>
-                How many hours do you sleep in a day?
+                How many hours do you sleep in a day?*
                 <input type="number" name="sleep hours" min="0" max="24">
             </label>
             <label>
-                Favorite Game:
+                Favorite Game*
                 <input type="text" name="Favorite Game" required>
             </label>
             <label>
-                Favorite Food:
+                Favorite Food*
                 <input type="text" name="Favorite Food" required>
             </label>
             <label>
-                Favorite Exercise:
+                Favorite Exercise*
                 <input type="text" name="Favorite Exercise" required>
             </label>
             <label>
-                What do you do when you're bored?
-                <textarea name="message" required></textarea>
+                What do you do when you're bored?*
+                <textarea name="bored-thoughts" required></textarea>
+            </label> 
+            <label>
+                Comments/Sugguestions?
+                <textarea name="Comments"></textarea>
             </label> 
             <!-- your other form fields go here -->
             <input type="reset" value="Clear Answers">

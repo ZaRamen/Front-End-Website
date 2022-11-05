@@ -3,13 +3,15 @@ function initialize()
 {
     bodyStyle = document.body.style;
     footer = document.getElementById("footer-content");
-    // If the previous page was dark then continue to be dark mode and vice versa
-    if (localStorage.getItem("isDark") == "true")
+    toggle = document.getElementById("check-btn");
+    console.log(toggle);
+
+    if(toggle.checked)
     {
         darkMode();
     }
     else
-    { 
+    {
         lightMode();
     }
 }
@@ -47,7 +49,7 @@ window.addEventListener('DOMContentLoaded', (event) =>
 {
     console.log('DOM fully loaded and parsed');
     initialize();
-    document.getElementById('mode').addEventListener("click", (event) => 
+    document.getElementById('check-btn').addEventListener("click", (event) => 
     {
       
         // returns rgb instead of hex //also can't set var to document.body.style.backgroundColor
