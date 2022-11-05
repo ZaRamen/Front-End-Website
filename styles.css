@@ -240,7 +240,7 @@ img:not(.game-images)
     width: 50%;
     margin: auto;
     object-fit: cover;
-
+    border-radius: 5%;
 }
 .ending
 {
