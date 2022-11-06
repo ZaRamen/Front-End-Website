@@ -80,7 +80,7 @@ a:hover, .dropdown-btn:hover
     height: 34px;
     text-align: center;
 }
-#check-btn
+#toggle-btn
 {
     position: absolute;
     opacity: 0;
@@ -98,10 +98,11 @@ a:hover, .dropdown-btn:hover
     margin-top: 3px;
     border-radius: 34px;    
 }
-#slider::before
+#slider-icon
 {
     position: absolute;
     content: "";
+    z-index: 1;
     border-radius: 50%;
     height: 26px;
     width: 26px;
@@ -115,7 +116,7 @@ a:hover, .dropdown-btn:hover
 }
 
 
-#check-btn:checked + #slider::before    
+#toggle-btn:checked + #slider-icon    
 {
     transform: translateX(45px);
     background-color: #333e5a;

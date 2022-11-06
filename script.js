@@ -3,9 +3,8 @@ function initialize()
 {
     bodyStyle = document.body.style;
     footer = document.getElementById("footer-content");
-    toggle = document.getElementById("check-btn");
-    console.log(toggle.checked);
-
+    toggle = document.getElementById("toggle-btn");
+    sliderIcon = document.getElementById("slider-icon");
     checkIfToggled();
     setMode();
 }
@@ -13,6 +12,9 @@ function checkIfToggled()
 {
     if (localStorage.getItem("isDark") == "true")
     {
+        // Remove unnecessary transition animations from repeating after you toggle dark mode and switch to another web page
+        sliderIcon.style.transition = "none";
+        sliderIcon.style.right = "85px";
         toggle.checked = true;
     }
     else
@@ -46,12 +48,13 @@ window.addEventListener('DOMContentLoaded', (event) =>
 {
     console.log('DOM fully loaded and parsed');
     initialize();
-    document.getElementById('check-btn').addEventListener("click", (event) => 
+    document.getElementById('toggle-btn').addEventListener("click", (event) => 
     {
       
         // returns rgb instead of hex //also can't set var to document.body.style.backgroundColor
         console.log(bodyStyle.backgroundColor)
-
+        // re add the transition to toggle dark mode
+        sliderIcon.style.transition = "all 0.35s ease-in";
         setMode();
     });
 });
