@@ -70,12 +70,13 @@ a:hover, .dropdown-btn:hover
 {
     background-color: #4a5b82;
 }
+
 /* Toggle Dark Mode */
 #toggle
 {
     position: relative;
     display: block;
-    width: 120px;
+    width: 80px;
     height: 34px;
     text-align: center;
 }
@@ -92,12 +93,10 @@ a:hover, .dropdown-btn:hover
     position: relative;
     cursor: pointer;
     background-color: #333e5a;
-    width: 120px;
+    width: 80px;
     height: 34px;
-    border-radius: 50%;
-    border-radius: 34px;
-    transition: 0.4s;
-    
+    margin-top: 3px;
+    border-radius: 34px;    
 }
 #slider::before
 {
@@ -106,17 +105,21 @@ a:hover, .dropdown-btn:hover
     border-radius: 50%;
     height: 26px;
     width: 26px;
-    background-color: #F7F5E6;
+    background-color: #333e5a;
+    /* cf950d ffb300*/
+    box-shadow: inset 3px -2px 12px 3px #FF5F1F, inset -12px -20px 12px 3px #ffb303;
+    /* f2af15 */
     left: 4px;
     bottom: 4px;
-    transition: 0.4s;
+    transition: 0.35s ease-in;
 }
 
 
 #check-btn:checked + #slider::before    
 {
-    background-color: #202435;
-    transform: translateX(85px);
+    transform: translateX(45px);
+    background-color: #333e5a;
+    box-shadow:  inset -4px -2px 0px 1px #749fbb, inset -12px -5px  #90c0df;  
 }
 
 /* Headers */

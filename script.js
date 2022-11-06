@@ -4,32 +4,29 @@ function initialize()
     bodyStyle = document.body.style;
     footer = document.getElementById("footer-content");
     toggle = document.getElementById("check-btn");
-    console.log(toggle);
+    console.log(toggle.checked);
 
-    if(toggle.checked)
+    checkIfToggled();
+    setMode();
+}
+function checkIfToggled()
+{
+    if (localStorage.getItem("isDark") == "true")
     {
-        darkMode();
+        toggle.checked = true;
     }
     else
     {
-        lightMode();
+        toggle.checked = false;
     }
 }
 function setMode()
 {
     // If it's dark mode switch to light mode and vice versa
-    if (bodyStyle.backgroundColor == "rgb(51, 58, 86)")
-    {
-        lightMode();
-    }
-    else
-    {   
-        darkMode();
-    }
+    toggle.checked ? darkMode() : lightMode();
 }
 function lightMode()
 {
-    console.log("I'm" + localStorage.getItem("isDark"));
     bodyStyle.backgroundColor = "#F7F5E6";
     bodyStyle.color = "black";
     footer.style.color = "black";
