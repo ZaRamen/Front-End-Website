@@ -9,7 +9,7 @@
     <script src="script.js"></script>
     <title>Main Page</title>
 </head>
-<body>
+<body onload="">
     <nav>
         <div><a href="index.html">Home</a></div><div>
         <a href="form.html">Form</a></div>
@@ -24,11 +24,15 @@
                 <div><a href="exercise.html">Exercise</a></div>
             </div>
         </div>
-        <div id="mode">
-            <input type="checkbox"><span id="circle"></span>
+        <div>
+            <label id="toggle">
+                <input id="toggle-btn" type="checkbox">
+                <span id="slider-icon"></span>
+                <span id="slider"></span>
+            </label>        
         </div>
     </nav>
-
+            
     <!-- Title -->
     <div class = "header">
         <h1>Things to do when you're bored</h1>
@@ -46,9 +50,12 @@
         <img src = "https://cdn.theculturetrip.com/wp-content/uploads/2017/09/bath-coffee-dmirty-mazurenkoflickr-1024x686.jpg" alt>
         <img src = "https://www.hussle.com/blog/wp-content/uploads/2022/04/Empty-gym-1200x900.jpg" alt>
     </div>
-    <footer>
-        <br>
-        <p>&copy Raymond Lin and Crystal Ling 2022</p>
-    </footer>
+    <br />
+    <div id="footer">
+        <footer id="footer-content">
+            <br>
+            <p>&copy Raymond Lin and Crystal Ling 2022</p>
+        </footer> 
+    </div>
 </body>
 </html>

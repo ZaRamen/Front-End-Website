@@ -7,10 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <script src="script.js"></script>
     <title>Sleep</title>
 </head>
 
-<body>
+<body onload="initialize();">
     <nav>
         <div><a href="index.html">Home</a></div>
         <div><a href="form.html">Form</a></div>
@@ -23,8 +24,12 @@
                 <div><a href="exercise.html">Exercise</a></div>
             </div>
         </div>
-        <div id="mode">
-            <input type="checkbox"><span id="circle"></span>
+        <div>
+            <label id="toggle">
+                <input id="toggle-btn" type="checkbox">
+                <span id="slider-icon"></span>
+                <span id="slider"></span>
+            </label>        
         </div>
     </nav>
 
@@ -111,12 +116,18 @@
             </tr>
         </table>
     </div>
-
-    <footer>
-        <br>
+    <div class="ending">
         <p>*We don't condone procrastinating. However, taking breaks is definitely OK</p>
         <p>**I don't support this statement (Raymond).</p>
-        <p>&copy Raymond Lin and Crystal Ling 2022</p>
-    </footer>
+    </div>
+    
+    <div id="footer">
+        <footer id="footer-content">
+            <br>
+            <p>&copy Raymond Lin and Crystal Ling 2022</p>
+            
+        </footer>
+    </div>
+    
 </body>
 </html>

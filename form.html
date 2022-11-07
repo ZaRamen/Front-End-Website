@@ -8,10 +8,11 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"> -->
+    <script src="script.js"></script>
     <title>Form</title>
 </head>
 
-<body>
+<body onload="initialize();">
     <nav>
         <div><a href="index.html">Home</a></div>
         <div><a href="form.html">Form</a></div>
@@ -26,46 +27,54 @@
                 <div><a href="exercise.html">Exercise</a></div>
             </div>
         </div>
-        <div id="mode">
-            <input type="checkbox"><span id="circle"></span>
+        <div>
+            <label id="toggle">
+                <input id="toggle-btn" type="checkbox">
+                <span id="slider-icon"></span>
+                <span id="slider"></span>
+            </label>        
         </div>
     </nav>
-    <div>
         <!-- modify this form HTML and place wherever you want your form -->
         <form action="https://formspree.io/f/mdojwvej" method="POST">
             <label>
-                Name:
+                Name*
                 <input type="text" name="Name" required>
             </label>
             <label>
-                How many hours do you sleep in a day?
+                How many hours do you sleep in a day?*
                 <input type="number" name="sleep hours" min="0" max="24">
             </label>
             <label>
-                Favorite Game:
+                Favorite Game*
                 <input type="text" name="Favorite Game" required>
             </label>
             <label>
-                Favorite Food:
+                Favorite Food*
                 <input type="text" name="Favorite Food" required>
             </label>
             <label>
-                Favorite Exercise:
+                Favorite Exercise*
                 <input type="text" name="Favorite Exercise" required>
             </label>
             <label>
-                What do you do when you're bored?
-                <textarea name="message" required></textarea>
-            </label>
+                What do you do when you're bored?*
+                <textarea name="bored-thoughts" required></textarea>
+            </label> 
+            <label>
+                Comments/Sugguestions?
+                <textarea name="Comments"></textarea>
+            </label> 
             <!-- your other form fields go here -->
             <input type="reset" value="Clear Answers">
             <input type="submit" value="Submit">
         </form>
+    
+    <div id="footer">
+        <footer id="footer-content">
+            <br>
+            <p>&copy Raymond Lin and Crystal Ling 2022</p>
+        </footer> 
     </div>
-    <footer>
-        <br>
-        <p>&copy Raymond Lin and Crystal Ling 2022</p>
-    </footer>
 </body>
-
 </html>
