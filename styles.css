@@ -360,12 +360,14 @@ footer p
     {
         grid-column-start: 1;
         text-align: left;
+        margin-left: 25%;
     }
 
     .right
     {
         grid-column-start: 2;
         text-align: left;
+        margin-left: 15%;
     }
     
 }
