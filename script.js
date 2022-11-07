@@ -60,20 +60,26 @@ window.addEventListener('DOMContentLoaded', (event) =>
 });
 
 
-function reveal() {
+function reveal() 
+{
     var reveals = document.querySelectorAll(".shrinked-images");
   
-    for (var i = 0; i < reveals.length; i++) {
+    for (var i = 0; i < reveals.length; i++) 
+    {
+    
       var windowHeight = window.innerHeight;
+      // element distance from the viewport's top 
       var elementTop = reveals[i].getBoundingClientRect().top;
-      var elementVisible = 150;
-  
-      if (elementTop < windowHeight - elementVisible) {
-        reveals[i].classList.add("active");
-      } else {
-        reveals[i].classList.remove("active");
-      }
+      // set each element visibile area to 400px 
+      //(increase it to make the element visible when most of it's content is within the window)
+      var elementVisible = 350;
+
+      //If the element is within the window view then reveal the element  
+      elementTop < windowHeight - elementVisible ?
+      reveals[i].classList.add("active") :  
+      reveals[i].classList.remove("active");
     }
   }
   
-  window.addEventListener("scroll", reveal);
+// call reveal when the window is scrolled
+window.addEventListener("scroll", reveal);

@@ -1,5 +1,6 @@
 /* Mobile and CSS selectors for any device size */
-html, body 
+html, 
+body 
 {
     display: flex;
     flex-direction: column;
@@ -31,13 +32,15 @@ a
 }
 
 /* Disable color change when link is visited */
-a:visited, .dropdown-btn, #toggle
+a:visited, 
+.dropdown-btn, #toggle
 {
    color: #F7F5E6;
 }
 
 /* Link when hovered over */
-a:hover, .dropdown-btn:hover
+a:hover, 
+.dropdown-btn:hover
 {
     color: #e0dec9;
 }
@@ -208,12 +211,14 @@ form
     margin: 2rem;
 }
 
-input, textarea
+input, 
+textarea
 {
     width: 100%;
 }
 
-input[type]:not([type=reset]):not([type=submit]):not([type=checkbox]):focus,textarea:focus
+input[type]:not([type=reset]):not([type=submit]):not([type=checkbox]):focus,
+textarea:focus
 {
     border: 3px solid #555;
     background-color: rgba(204, 204, 204, 0.685);
@@ -228,7 +233,8 @@ textarea
     resize: none;
 }
 
-input[type=submit], input[type=reset]
+input[type=submit], 
+input[type=reset]
 {
     margin-top: 1rem;
     padding: 1rem;
@@ -239,7 +245,9 @@ input[type=submit], input[type=reset]
     cursor: pointer;
 }
 
-table, th, td
+table, 
+th, 
+td
 {
     border: 1px solid black;
     border-collapse: collapse;
