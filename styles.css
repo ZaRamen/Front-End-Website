@@ -263,6 +263,24 @@ img:not(.shrinked-images)
     object-fit: cover;
     border-radius: 5%;
 }
+.shrinked-images + p
+{
+   position: absolute;
+   opacity: 0;
+   visibility: hidden;
+   transform: translateY(150px);
+   transition: 1s all ease;
+   z-index: 0;
+}
+
+.shrinked-images.active + p
+{
+    position: relative;
+    display: block;
+    visibility: visible;
+    transform: translateY(0);
+    opacity: 1;
+}
 .ending
 {
     font-size: 1rem;
