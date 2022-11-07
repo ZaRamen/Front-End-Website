@@ -46,6 +46,7 @@ a:hover, .dropdown-btn:hover
 {
     overflow: hidden;
     text-align: center;
+    width: 100%;
 }
 
 .dropdown-content
@@ -311,6 +312,7 @@ footer p
     {
         overflow: hidden;
         text-align: left;
+        width: fit-content;
     }
     
     .dropdown-content
