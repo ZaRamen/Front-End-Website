@@ -7,11 +7,16 @@ body
     min-height: 100vh;
     font-family: 'Montserrat', sans-serif;
 }
-
 body
 {
     background-color: #F7F5E6;
     font-size: 2rem;
+    transition: all 1s ease;
+}
+body.dark
+{
+    background-color: #333A56;
+    color: #FFFFFF;
 }
 
 /* Make navbar as a column */
@@ -128,7 +133,30 @@ a:hover,
     box-shadow:  inset -4px -2px 0px 1px #749fbb, inset -12px -5px  #90c0df;  
 }
 
-/* Headers */
+/* Headers (Also content) */
+.header, .content, form
+{
+    animation: fadeIn .5s ease-in-out; 
+}
+@keyframes fadeIn
+{
+    0%
+    {
+        opacity: 0.2;
+    }
+    25%
+    {
+        opacity: 0.5;
+    }
+    50%
+    {
+        opacity: 0.8;
+    }
+    100%
+    {
+        opacity: 1;
+    }
+}
 .header h1
 {
     width: 80%;
@@ -285,18 +313,17 @@ tr:first-child
 }
 
 /* Dark mode */
-/*
-table,
-tr
+table.dark,
+tr.dark
 {
     background-color: #39445c;
 }
 
-tr:nth-child(even)
+tr.dark:nth-child(even)
 {
     background-color:#41506f;
 }
-*/
+
 
 img:not(.shrinked-images)
 {
@@ -345,6 +372,7 @@ img:not(.shrinked-images)
     text-align: center;
 }
 
+/* Footer container */
 #footer
 {
     display: flex;
@@ -361,9 +389,14 @@ footer
     background-color: #E8E8E8;
     text-align: center;
     font-size: 1rem;
+    transition: all 1s ease;
     /* flex: 1; */
 }
-
+footer.dark
+{
+    color: white;
+    background-color: #39445c;
+}
 footer p
 {
     margin: 0px;

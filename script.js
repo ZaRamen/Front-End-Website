@@ -1,7 +1,7 @@
 
 function initialize()
 {
-    bodyStyle = document.body.style;
+    body = document.body;
     footer = document.getElementById("footer-content");
     toggle = document.getElementById("toggle-btn");
     sliderIcon = document.getElementById("slider-icon");
@@ -9,41 +9,37 @@ function initialize()
     checkIfToggled();
     setMode();
 }
+
 function checkIfToggled()
 {
-    if (localStorage.getItem("isDark") == "true")
+    // Remove unnecessary transition animations from repeating after you toggle dark mode and switch to another web page
+    if (localStorage.getItem("isDark") != "true")
     {
-        // Remove unnecessary transition animations from repeating after you toggle dark mode and switch to another web page
-        sliderIcon.style.transition = "none";
-        sliderIcon.style.right = "85px";
-        toggle.checked = true;
-        removeTransitions();
+        toggle.checked = false;
     }
     else
     {
-        toggle.checked = false;
+        toggle.checked = true;
+        removeTransitions();
     }
 }
 function setMode()
 {
     // If it's dark mode switch to light mode and vice versa
+    console.log(toggle.checked);
     toggle.checked ? darkMode() : lightMode();
 }
 function lightMode()
 {
-    bodyStyle.backgroundColor = "#F7F5E6";
-    bodyStyle.color = "black";
-    footer.style.color = "black";
-    footer.style.backgroundColor = "#E8E8E8";
+    body.classList.remove("dark");
+    footer.classList.remove("dark");
     // stores a variable named isDark between all web pages 
     localStorage.setItem("isDark", false);
 }
 function darkMode()
 {
-    bodyStyle.backgroundColor = "#333A56";
-    bodyStyle.color = "#FFFFFF";
-    footer.style.color = "white";
-    footer.style.backgroundColor = "#39445c";
+    body.classList.add("dark");
+    footer.classList.add("dark");
     localStorage.setItem("isDark", true);
 }
 window.addEventListener('DOMContentLoaded', (event) => 
@@ -52,18 +48,17 @@ window.addEventListener('DOMContentLoaded', (event) =>
     initialize();
     document.getElementById('toggle-btn').addEventListener("click", (event) => 
     {
-      
-        // returns rgb instead of hex //also can't set var to document.body.style.backgroundColor
-        console.log(bodyStyle.backgroundColor)
         // re add the transition to toggle dark mode
         sliderIcon.style.transition = "all 0.35s ease-in";
-        removeTransitions();
         setMode();
     });
 });
 
 function removeTransitions()
 {
+    sliderIcon.style.transition = "none";
+    sliderIcon.style.right = "85px";
+    body.style.transition = "none";
     for (var i = 0; i < content.length; i++)
     {
         content[i].style.transition = "none";
