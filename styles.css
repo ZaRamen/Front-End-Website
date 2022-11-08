@@ -1,5 +1,6 @@
 /* Mobile and CSS selectors for any device size */
-html, body 
+html, 
+body 
 {
     display: flex;
     flex-direction: column;
@@ -31,13 +32,15 @@ a
 }
 
 /* Disable color change when link is visited */
-a:visited, .dropdown-btn, #toggle
+a:visited, 
+.dropdown-btn, #toggle
 {
    color: #F7F5E6;
 }
 
 /* Link when hovered over */
-a:hover, .dropdown-btn:hover
+a:hover, 
+.dropdown-btn:hover
 {
     color: #e0dec9;
 }
@@ -147,7 +150,9 @@ a:hover, .dropdown-btn:hover
 {
     width: 80%;
     margin: auto;
+    transition: 1s ease-in-out;
 }
+
 
 /* Select all content children and set it to the center except p elements*/
 .content > *:not(p):not(ol):not(ul)
@@ -208,12 +213,14 @@ form
     margin: 2rem;
 }
 
-input, textarea
+input, 
+textarea
 {
     width: 100%;
 }
 
-input[type]:not([type=reset]):not([type=submit]):not([type=checkbox]):focus,textarea:focus
+input[type]:not([type=reset]):not([type=submit]):not([type=checkbox]):focus,
+textarea:focus
 {
     border: 3px solid #555;
     background-color: rgba(204, 204, 204, 0.685);
@@ -228,7 +235,8 @@ textarea
     resize: none;
 }
 
-input[type=submit], input[type=reset]
+input[type=submit], 
+input[type=reset]
 {
     margin-top: 1rem;
     padding: 1rem;
@@ -239,7 +247,9 @@ input[type=submit], input[type=reset]
     cursor: pointer;
 }
 
-table, th, td
+table, 
+th, 
+td
 {
     border: 1px solid black;
     border-collapse: collapse;
@@ -262,18 +272,34 @@ img:not(.shrinked-images)
     margin: auto;
     object-fit: cover;
     border-radius: 5%;
+    transform: t;
+    transition: 1s ease;
+}
+.shrinked-images.active
+{
+    display: block;
+    margin: auto;
+    object-fit: cover;
+    border-radius: 5%;
+    transform: translateX(150px);
 }
 .shrinked-images + p
 {
-    margin-top: 2px;
-    visibility: hidden;
-     transition: 0.4s ease-in;
+   position: absolute;
+   opacity: 0;
+   visibility: hidden;
+   transform: translateY(150px);
+   transition: 1s ease;
+   z-index: 0;
 }
-.shrinked-images:hover + p
+
+.shrinked-images.active + p
 {
+    position: relative;
+    display: block;
     visibility: visible;
-    transform: translateY(30px) scale(1.1);
-    
+    transform: translateY(0);
+    opacity: 1;
 }
 .ending
 {
@@ -372,12 +398,14 @@ footer p
     {
         grid-column-start: 1;
         text-align: left;
+        margin-left: 25%;
     }
 
     .right
     {
         grid-column-start: 2;
         text-align: left;
+        margin-left: 15%;
     }
     
 }
