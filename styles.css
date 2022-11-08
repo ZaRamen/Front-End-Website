@@ -9,9 +9,16 @@ body
 }
 body
 {
-    background-color: #F7F5E6;
+    background-color: initial;
     font-size: 2rem;
     transition: all 1s ease;
+}
+/* Only for body since sometimes when reloading the page it causes only the background color 
+   to appear for a few seconds
+ */
+body.light
+{
+    background-color: #F7F5E6;  
 }
 body.dark
 {
@@ -246,20 +253,20 @@ input,
 textarea
 {
     width: 100%;
+    background-color: #5171b99e;
 }
 
 input[type]:not([type=reset], [type=submit], [type=checkbox]):focus,
 textarea:focus
 {
     border: 3px solid #555;
-    background-color: rgba(204, 204, 204, 0.685);
+    background-color: #5d79c0;
 }
 
 textarea
 {
     padding: 12px 20px;
     box-sizing: border-box;
-    border: 2px solid #ccc;
     border-radius: 4px;
     resize: none;
 }

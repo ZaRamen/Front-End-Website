@@ -32,6 +32,7 @@ function setMode()
 function lightMode()
 {
     body.classList.remove("dark");
+    body.classList.add("light");
     footer.classList.remove("dark");
     // stores a variable named isDark between all web pages 
     localStorage.setItem("isDark", false);
