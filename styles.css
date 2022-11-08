@@ -150,7 +150,9 @@ a:hover,
 {
     width: 80%;
     margin: auto;
+    transition: 1s ease-in-out;
 }
+
 
 /* Select all content children and set it to the center except p elements*/
 .content > *:not(p):not(ol):not(ul)
@@ -217,7 +219,7 @@ textarea
     width: 100%;
 }
 
-input[type]:not([type=reset]):not([type=submit]):not([type=checkbox]):focus,
+input[type]:not([type=reset], [type=submit], [type=checkbox]):focus,
 textarea:focus
 {
     border: 3px solid #555;
@@ -266,10 +268,17 @@ img:not(.shrinked-images)
 .shrinked-images
 {
     display: block;
+    opacity: 0;
     width: 90%;
     margin: auto;
     object-fit: cover;
     border-radius: 5%;
+    transition: 1s ease;
+}
+.shrinked-images.active
+{
+    display: block;
+    opacity: 1;
 }
 .shrinked-images + p
 {
@@ -277,7 +286,7 @@ img:not(.shrinked-images)
    opacity: 0;
    visibility: hidden;
    transform: translateY(150px);
-   transition: 1s all ease;
+   transition: 1s ease;
    z-index: 0;
 }
 

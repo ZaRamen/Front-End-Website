@@ -5,6 +5,7 @@ function initialize()
     footer = document.getElementById("footer-content");
     toggle = document.getElementById("toggle-btn");
     sliderIcon = document.getElementById("slider-icon");
+    content = document.getElementsByClassName("content");
     checkIfToggled();
     setMode();
 }
@@ -16,6 +17,7 @@ function checkIfToggled()
         sliderIcon.style.transition = "none";
         sliderIcon.style.right = "85px";
         toggle.checked = true;
+        removeTransitions();
     }
     else
     {
@@ -55,31 +57,42 @@ window.addEventListener('DOMContentLoaded', (event) =>
         console.log(bodyStyle.backgroundColor)
         // re add the transition to toggle dark mode
         sliderIcon.style.transition = "all 0.35s ease-in";
+        removeTransitions();
         setMode();
     });
 });
 
+function removeTransitions()
+{
+    for (var i = 0; i < content.length; i++)
+    {
+        content[i].style.transition = "none";
+    }
+}
 
 function reveal() 
 {
-    var reveals = document.querySelectorAll(".shrinked-images");
-  
+    var images = document.querySelectorAll(".shrinked-images");
+    traverseRevealElements(images, 200);
+}
+
+function traverseRevealElements(reveals, distance)
+{
     for (var i = 0; i < reveals.length; i++) 
     {
-    
       var windowHeight = window.innerHeight;
       // element distance from the viewport's top 
       var elementTop = reveals[i].getBoundingClientRect().top;
       // set each element visibile area to 400px 
       //(increase it to make the element visible when most of it's content is within the window)
-      var elementVisible = 350;
+      var elementVisible = distance;
 
       //If the element is within the window view then reveal the element  
       elementTop < windowHeight - elementVisible ?
       reveals[i].classList.add("active") :  
       reveals[i].classList.remove("active");
     }
-  }
+}
   
 // call reveal when the window is scrolled
 window.addEventListener("scroll", reveal);
