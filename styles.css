@@ -248,7 +248,7 @@ input[type=reset]
 }
 
 table, 
-th
+th 
 {
     border-collapse: collapse;
     margin: auto;
@@ -270,8 +270,12 @@ tr:first-child
 table,
 tr
 {
-    border:1px solid black;
     background-color: #E8E8E8;
+}
+
+tr:nth-child(even)
+{
+    background-color:#dadada;
 }
 
 tr:first-child
@@ -279,14 +283,17 @@ tr:first-child
     color: #F7F5E6;
 }
 
-
 /* Dark mode */
 /*
 table,
 tr
 {
-    border:1px solid#FFFFFF;
     background-color: #39445c;
+}
+
+tr:nth-child(even)
+{
+    background-color:#41506f;
 }
 */
 
