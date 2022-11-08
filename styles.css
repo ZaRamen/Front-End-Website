@@ -248,7 +248,7 @@ input[type=reset]
 }
 
 table, 
-th, 
+th
 {
     border-collapse: collapse;
     margin: auto;
