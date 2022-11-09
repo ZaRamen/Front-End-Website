@@ -383,6 +383,7 @@ img:not(.shrinked-images)
 {
     display: flex;
     align-items: flex-end;
+    margin-top:  80px;
     flex: 1;
     justify-content: center;
 }
@@ -483,6 +484,10 @@ footer p
         grid-column-start: 2;
         text-align: left;
         margin-left: 15%;
+    }
+    #footer
+    {
+        margin-top: 0px;
     }
     
 }

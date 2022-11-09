@@ -8,7 +8,6 @@ function initialize()
     content = document.getElementsByClassName("content");
     table = document.getElementsByTagName("table")[0];
     tableRows = document.getElementsByTagName("tr");
-
     checkIfToggled();
     setMode();
 }
