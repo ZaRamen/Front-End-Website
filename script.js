@@ -40,7 +40,7 @@ function lightMode()
 
     for(let i = 0; i < tableRows.length; i++)
     {
-        tableRows[i].add("dark");
+        tableRows[i].classList.remove("dark");
     }
     // stores a variable named isDark between all web pages 
     localStorage.setItem("isDark", false);
@@ -49,6 +49,10 @@ function darkMode()
 {
     body.classList.add("dark");
     footer.classList.add("dark");
+    for(let i = 0; i < tableRows.length; i++)
+    {
+        tableRows[i].classList.add("dark");
+    }
     localStorage.setItem("isDark", true);
 }
 
