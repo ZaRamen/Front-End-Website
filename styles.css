@@ -143,11 +143,11 @@ a:hover,
 /* Headers (Also content) */
 .header, .content, form
 {
-    /* animation: fadeIn 1s ease-in;  */
-    /* -webkit-animation: fadeIn 1s ease-in;
+    animation: fadeIn 1s ease-in; 
+    -webkit-animation: fadeIn 1s ease-in;
     -moz-animation: fadeIn 1s ease-in;;
     -o-animation: fadeIn 1s ease-in;
-    -ms-animation: fadeIn 1s ease-in; */
+    -ms-animation: fadeIn 1s ease-in;
 }
 @keyframes fadeIn
 {
