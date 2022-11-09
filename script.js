@@ -28,7 +28,6 @@ function checkIfToggled()
 function setMode()
 {
     // If it's dark mode switch to light mode and vice versa
-    console.log(toggle.checked);
     toggle.checked ? darkMode() : lightMode();
 }
 function lightMode()
@@ -74,13 +73,14 @@ function removeTransitions()
     body.style.transition = "none";
     for (var i = 0; i < content.length; i++)
     {
+        console.log(content[0])
         content[i].style.transition = "none";
     }
 }
 function addTransitions()
 {
     sliderIcon.style.transition = "all 0.35s ease-in";
-    body.style.transition = "all 1s ease";
+    // body.style.transition = "all 1s ease";
 }
 function reveal() 
 {
