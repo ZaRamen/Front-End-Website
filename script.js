@@ -6,6 +6,9 @@ function initialize()
     toggle = document.getElementById("toggle-btn");
     sliderIcon = document.getElementById("slider-icon");
     content = document.getElementsByClassName("content");
+    table = document.getElementsByTagName("table")[0];
+    tableRows = document.getElementsByTagName("tr");
+
     checkIfToggled();
     setMode();
 }
@@ -34,6 +37,11 @@ function lightMode()
     body.classList.remove("dark");
     body.classList.add("light");
     footer.classList.remove("dark");
+
+    for(let i = 0; i < tableRows.length; i++)
+    {
+        tableRows[i].add("dark");
+    }
     // stores a variable named isDark between all web pages 
     localStorage.setItem("isDark", false);
 }
@@ -43,6 +51,7 @@ function darkMode()
     footer.classList.add("dark");
     localStorage.setItem("isDark", true);
 }
+
 window.addEventListener('DOMContentLoaded', (event) => 
 {
     console.log('DOM fully loaded and parsed');
@@ -50,7 +59,7 @@ window.addEventListener('DOMContentLoaded', (event) =>
     document.getElementById('toggle-btn').addEventListener("click", (event) => 
     {
         // re add the transition to toggle dark mode
-        sliderIcon.style.transition = "all 0.35s ease-in";
+        addTransitions();
         setMode();
     });
 });
@@ -65,7 +74,11 @@ function removeTransitions()
         content[i].style.transition = "none";
     }
 }
-
+function addTransitions()
+{
+    sliderIcon.style.transition = "all 0.35s ease-in";
+    body.style.transition = "all 1s ease";
+}
 function reveal() 
 {
     var images = document.querySelectorAll(".shrinked-images");
