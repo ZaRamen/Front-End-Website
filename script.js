@@ -1,4 +1,4 @@
-
+// Intialize all selectors and elements needed for dark mode and scroll transitons
 function initialize()
 {
     body = document.body;
@@ -12,6 +12,7 @@ function initialize()
     setMode();
 }
 
+// checks if the previous page had dark mode enabled, if so continue setting the page in dark mode
 function checkIfToggled()
 {
     // Remove unnecessary transition animations from repeating after you toggle dark mode and switch to another web page
@@ -22,6 +23,7 @@ function checkIfToggled()
     else
     {
         toggle.checked = true;
+        // remove any transitons that is repetitive
         removeTransitions();
     }
 }
@@ -30,6 +32,8 @@ function setMode()
     // If it's dark mode switch to light mode and vice versa
     toggle.checked ? darkMode() : lightMode();
 }
+
+// add and remove class identifiers to change the css of the elements specified
 function lightMode()
 {
     body.classList.remove("dark");
@@ -43,6 +47,8 @@ function lightMode()
     // stores a variable named isDark between all web pages 
     localStorage.setItem("isDark", false);
 }
+
+// add and remove class identifiers to change the CSS of the elements specified
 function darkMode()
 {
     body.classList.add("dark");
@@ -54,13 +60,14 @@ function darkMode()
     localStorage.setItem("isDark", true);
 }
 
+// light/dark mode toggle function
 window.addEventListener('DOMContentLoaded', (event) => 
 {
     console.log('DOM fully loaded and parsed');
     initialize();
     document.getElementById('toggle-btn').addEventListener("click", (event) => 
     {
-        // re add the transition to toggle dark mode
+        // re add the transition to toggle dark mode if they were deleted  
         addTransitions();
         setMode();
     });
@@ -82,12 +89,14 @@ function addTransitions()
     sliderIcon.style.transition = "all 0.35s ease-in";
     // body.style.transition = "all 1s ease";
 }
+
+// reveal elements if they come in view
 function reveal() 
 {
     var images = document.querySelectorAll(".shrinked-images");
     traverseRevealElements(images, 200);
 }
-
+// apply CSS properities through adding/removing classes to elements 
 function traverseRevealElements(reveals, distance)
 {
     for (var i = 0; i < reveals.length; i++) 
