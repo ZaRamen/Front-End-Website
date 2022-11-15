@@ -374,7 +374,7 @@ img:not(.shrinked-images)
 {
     display: flex;
     align-items: flex-end;
-    margin-top:  20px;
+    margin-top: 60px;
     flex: 1;
     justify-content: center;
 }
@@ -488,4 +488,3 @@ footer p
 
 
 /* Dark Mode */
-
