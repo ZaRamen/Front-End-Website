@@ -130,8 +130,7 @@ a:hover,
     bottom: 4px;
     transition: 0.35s ease-in;
 }
-
-
+/* move the icon when the button is checked */
 #toggle-btn:checked + #slider-icon    
 {
     transform: translateX(45px);
@@ -143,11 +142,8 @@ a:hover,
 .header, .content, form
 {
     animation: fadeIn 0.4s ease-in; 
-    -webkit-animation: fadeIn 1s ease-in;
-    -moz-animation: fadeIn 1s ease-in;;
-    -o-animation: fadeIn 1s ease-in;
-    -ms-animation: fadeIn 1s ease-in;
 }
+/* Allows the words to slowly appear when you open a new html page */
 @keyframes fadeIn
 {
     0% {opacity: 0.2;}
@@ -246,6 +242,7 @@ textarea
     background-color: #5171b99e;
 }
 
+
 input[type]:not([type=reset], [type=submit], [type=checkbox]):focus,
 textarea:focus
 {
@@ -261,6 +258,7 @@ textarea
     resize: none;
 }
 
+/* Differentiate colors for the submit and reset button on the form */
 input[type=submit], 
 input[type=reset]
 {
@@ -321,7 +319,6 @@ tr.dark:nth-child(even)
     background-color:#41506f;
 }
 
-
 img:not(.shrinked-images)
 {
     width: 100%;
@@ -329,7 +326,7 @@ img:not(.shrinked-images)
     object-fit: cover;
     border-radius: 5%;
 }
-
+/* Make images a consistent size */
 .shrinked-images
 {
     display: block;
@@ -485,6 +482,3 @@ footer p
     }
     
 }
-
-
-/* Dark Mode */
